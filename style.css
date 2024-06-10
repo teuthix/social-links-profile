@@ -4,15 +4,15 @@
 }
 
 :root {
-    --green: hsl(75, 94%, 57%);
+    --accent: hsl(75, 94%, 57%);
     --white: hsl(0, 0%, 100%);
     --grey: hsl(0, 0%, 20%);
-    --dark-grey: hsl(0, 0%, 12%);
-    --off-black: hsl(0, 0%, 8%);
+    --peach: hsl(9, 94%, 75%);
+    --darkest: hsl(260, 56%, 14%);
 }
   
 body {
-    background-color: var(--off-black);
+    background-color: var(--darkest);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,7 +28,7 @@ h1 {
   }
   
 p {
-    color: var(--white);
+    color: var(--darkest);
     font-size: 14px;
 }
 
@@ -36,6 +36,8 @@ img {
     border-radius: 50%;
     width: 8rem;
     margin-bottom: 2rem;
+    border-width: 10px;
+    border-style: solid;
 }
     
 .container {
@@ -45,22 +47,25 @@ img {
     }
 
 .box {
-    background-color: var(--dark-grey);
+    background-color: var(--peach);
     border-radius: 20px;
     width: 20rem;
     padding: 2.2rem;
     margin: 1.5rem;
+    box-shadow: 12px 15px var(--accent);
+    border-width: 5px;
+    border-style: solid;
+    border-color: var(--darkest);
 }
         
 .links {
     width: 100%;
-    /* transform: translate(-50%, -50%); */
 }
 
 .btn {
     color: var(--white);
-    background-color: var(--grey);
-    border-color: var(--grey);
+    background-color: var(--darkest);
+    border-color: var(--darkest);
     position: relative;
     font-weight: 600;
     padding-top: .8rem;
@@ -75,7 +80,7 @@ img {
     }
 
 .btn::before {
-    background: var(--green);
+    background: var(--accent);
     content: "";
     position: absolute;
     top: 50%;
@@ -88,18 +93,17 @@ img {
 }
 
 .btn:hover {
-    color: var(--off-black);
+    color: var(--darkest);
 }
 
 .btn:hover::before {
-    color: var(--off-black);
     height: 550%;
 }
 
 .location {
-    color: var(--green);
+    color: var(--darkest);
     font-weight: 600;
-    }
+}
     
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
